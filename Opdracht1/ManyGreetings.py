@@ -1,3 +1,4 @@
 name =  raw_input("What is your name? ")
+greetings =  raw_input("How many greetings? ")
 
-print("Hello, " + name + "!")
+print(greetings + " x Hello, " + name + "!")
