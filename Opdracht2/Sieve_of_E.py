@@ -10,6 +10,7 @@ def sieve(a):
     wortel=int(math.ceil((math.sqrt(a))))
     lijst1 = list(range(3,a,2))
     lijst1.append(2)
+    lijst1.sort()
     minilijst=list(range(3,wortel))
     for mini in minilijst:
         for getal in lijst1:
