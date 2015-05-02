@@ -13,8 +13,7 @@ def sieve(a):
     minilijst=list(range(3,wortel))
     for mini in minilijst:
         for getal in lijst1:
-            if getal%mini==0 and getal != mini:
-                lijst1.remove(getal)
+            lijst1.remove(getal*mini)
     return(lijst1)
 
 prime = open(output,'w')
