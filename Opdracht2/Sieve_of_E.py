@@ -15,7 +15,7 @@ def sieve(a):
     for mini in minilijst:
         for getal in lijst1:
             if getal%mini==0 and getal != mini:
-                lijst1.remove(getal)
+                getal=0
     return(lijst1)
 prime = open(output,'w')
 data = sieve(N)
