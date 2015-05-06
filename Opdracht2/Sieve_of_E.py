@@ -15,7 +15,7 @@ def sieve(a):
     for mini in minilijst:
         for getal in lijst1:
             if getal%mini==0 and getal != mini:
-                lijst1[(getal-1)/2-1]=0
+                lijst1[(getal-1)//2-1]=0
     lijst1=list(set(lijst1))
     lijst1.remove(0)
     lijst1.append(2)
