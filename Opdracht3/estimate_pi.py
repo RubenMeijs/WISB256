@@ -12,8 +12,6 @@ def drop_needle(L):
     punt1=(x0,y0)
     punt2=(x0+ L*math.cos(a),y0+L*math.sin(a))
     #omdat we van verticale lijnen uit gaan hebben we een hit als x1-x0 groter is dan de afstand tot de lijn
-    dbegin=min(punt1[0], 1-punt1[0]) #de afstand van begin punt tot de dichtsbijzijnde lijn
-    dx=abs(punt2[0]-punt1[0])
     
     #bepalen of het een hit is of niet
     if punt2[0]>1 or punt2[0]<0:
