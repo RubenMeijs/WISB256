@@ -40,7 +40,7 @@ else:
 if L<=1:
     pi = (2*L)*N/aantal_hits
 else:
-    pi = (2*L)/(aantal_hits/float(N)-1)-(2*(math.sqrt(L**2-1)+math.asin(1/L)))/(aantal_hits/float(N)-1)
+    pi = (2*L)/(aantal_hits/N-1)-(2*(math.sqrt(L**2-1)+math.asin(1/L)))/(aantal_hits/N-1)
     
 scherm1 = str(aantal_hits) + ' hits in ' +  str(N) +  ' tries \n Pi = ' + str(pi)
     
