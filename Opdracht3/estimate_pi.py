@@ -20,6 +20,9 @@ def drop_needle(L):
         hit=False
     return(hit)
 
+if len(sys.argv)==4:
+    random.seed(float(sys.argv[3]))
+
 if len(sys.argv)<3:
     print('Use: estimate_pi.py N L')
 elif float(sys.argv[2])>1:
@@ -29,7 +32,6 @@ else:
     L = float(sys.argv[2])
     aantal_hits=0
     lijst= range(1,N)
-    
     for i in lijst:
         hit=drop_needle(L)
         if hit== True:
