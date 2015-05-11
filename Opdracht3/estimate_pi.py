@@ -25,8 +25,8 @@ if len(sys.argv)==4:
 
 if len(sys.argv)<3:
     print('Use: estimate_pi.py N L')
-elif float(sys.argv[2])>1:
-    print('AssertionError: L should be smaller than 1')  
+# elif float(sys.argv[2])>1:
+#     print('AssertionError: L should be smaller than 1')  
 else:
     N = int(sys.argv[1])
     L = float(sys.argv[2])
@@ -36,10 +36,13 @@ else:
         hit=drop_needle(L)
         if hit== True:
             aantal_hits+=1
+
+if L<=1:
+    pi = (2*L)*N/aantal_hits
+else:
+    pi = (2*L)/(aantal_hits/float(N)-1)-(2*(math.sqrt(L**2-1)+math.asin(1/L)))/(aantal_hits/float(N)-1)
     
-    pi=2*L*N / aantal_hits
-    
-    scherm1 = str(aantal_hits) + ' hits in ' +  str(N) +  ' tries \n Pi = ' + str(pi)
+scherm1 = str(aantal_hits) + ' hits in ' +  str(N) +  ' tries \n Pi = ' + str(pi)
     
     
-    print(scherm1)
+print(scherm1)
