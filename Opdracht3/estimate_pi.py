@@ -18,7 +18,7 @@ def drop_needle(L):
         hit=True
     else:
         hit=False
-    return(hit)
+    return hit
 
 if len(sys.argv)==4:
     random.seed(float(sys.argv[3]))
