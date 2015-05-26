@@ -29,4 +29,26 @@ class Vector():
     def lincomb(self,other,alpha, beta):
         return Vector(self.n, list(map(lambda x,y: x+y, self.scalar(alpha).vector, other.scalar(beta).vector)))
 
+
+def GrammSchmidt(vectoren):
+    
+    vectoren[0] = vectoren[0].scalar(1/vectoren[0].norm())
+        
+    basis_vectoren = [vectoren[0]]
+    
+    for i in range(1, len(vectoren)):
+        basis =  vectoren[i]
+        
+        for n in range(0,i):
+            projectie = basis_vectoren[n].scalar(basis.inner(basis_vectoren[n]) / basis_vectoren[n].norm())
+            basis = basis.lincomb(projectie,1,-1)
+            basis = basis.scalar(1/basis.norm())
+            print(projectie)
+            
+        basis_vectoren.append(basis)
+            
+    
+    return(basis_vectoren)
+            
+        
         
