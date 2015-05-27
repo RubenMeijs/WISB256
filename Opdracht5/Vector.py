@@ -43,7 +43,7 @@ def GrammSchmidt(vectoren):
             projectie = basis_vectoren[n].scalar(basis.inner(basis_vectoren[n]) / basis_vectoren[n].norm())
             basis = basis.lincomb(projectie,1,-1)
             basis = basis.scalar(1/basis.norm())
-            print(projectie)
+            
             
         basis_vectoren.append(basis)
             
