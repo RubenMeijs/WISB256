@@ -35,14 +35,5 @@ class Lorenz():
                 
         return stabiel
             
-            
-    # def isStable(self, u):
-    #     matrix = self.df(u)
-    #     stable = True
-    #     for i in linalg.eigvals(matrix):
-    #         if i>=0:
-    #             stable = False
-    #             break
 
-    #     return stable    
     
